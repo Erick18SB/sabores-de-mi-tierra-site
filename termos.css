@@ -1,0 +1,337 @@
+
+/* ========================================
+   TERMOS DE USO - CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #F5EBDD;
+    color: #2F211B;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.termos-cabecalho {
+    padding: 40px 24px 30px;
+}
+
+/* Botão voltar ao início */
+
+.termos-voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    max-width: 1000px;
+    margin: 0 auto 45px;
+
+    color: #A75B3B;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.termos-voltar:hover {
+    color: #2F211B;
+}
+
+.termos-voltar:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 5px;
+}
+
+.termos-voltar span {
+    font-size: 20px;
+}
+
+/* Apresentação */
+
+.termos-apresentacao {
+    text-align: center;
+}
+
+.termos-etiqueta {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nome-vermelho {
+    color: #C63B32;
+}
+
+.nome-amarelo {
+    color: #C49A23;
+}
+
+.nome-verde {
+    color: #287A48;
+}
+
+.termos-apresentacao h1 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.3;
+}
+
+.linha-bolivia {
+    width: 180px;
+    height: 4px;
+    margin: 20px auto;
+
+    border-radius: 4px;
+
+    background: linear-gradient(
+        to right,
+        #C63B32 0%,
+        #C63B32 33.33%,
+        #E6BD38 33.33%,
+        #E6BD38 66.66%,
+        #287A48 66.66%,
+        #287A48 100%
+    );
+}
+
+.termos-apresentacao p {
+    margin: 0;
+    color: #6B584D;
+    font-size: 13px;
+}
+
+/* ========================================
+   CONTEÚDO DOS TERMOS
+======================================== */
+
+.termos-container {
+    width: calc(100% - 48px);
+    max-width: 1000px;
+
+    margin: 25px auto 80px;
+    padding: 45px 50px;
+
+    background-color: #FFF9F3;
+    border: 1px solid #EADCCD;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(47, 33, 27, 0.05);
+}
+
+/* Cada seção dos termos */
+
+.termos-secao {
+    padding: 26px 0;
+    border-bottom: 1px solid #EADCCD;
+}
+
+.termos-secao:first-child {
+    padding-top: 0;
+}
+
+.termos-secao:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Títulos das seções */
+
+.termos-secao h2 {
+    margin: 0 0 14px;
+
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+/* Parágrafos */
+
+.termos-secao p {
+    margin: 0 0 14px;
+
+    color: #6B584D;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.termos-secao p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   BOTÃO DE CONTATO
+======================================== */
+
+.termos-contato {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+
+    background-color: #A75B3B;
+    color: #FFFFFF;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.termos-contato:hover {
+    background-color: #87462D;
+    transform: translateY(-2px);
+}
+
+.termos-contato:focus-visible {
+    outline: 2px solid #2F211B;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.termos-rodape {
+    padding: 25px 20px;
+
+    background-color: #2F211B;
+    color: #F5EBDD;
+
+    text-align: center;
+}
+
+.termos-rodape p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .termos-cabecalho {
+        padding: 28px 16px 20px;
+    }
+
+    .termos-voltar {
+        margin-bottom: 35px;
+        font-size: 13px;
+    }
+
+    .termos-apresentacao h1 {
+        font-size: 32px;
+    }
+
+    .termos-etiqueta {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .linha-bolivia {
+        width: 150px;
+    }
+
+    .termos-container {
+        width: calc(100% - 32px);
+        margin: 20px auto 50px;
+        padding: 28px 20px;
+        border-radius: 12px;
+    }
+
+    .termos-secao {
+        padding: 22px 0;
+    }
+
+    .termos-secao h2 {
+        font-size: 20px;
+    }
+
+    .termos-secao p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .termos-contato {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* ========================================
+   ACESSIBILIDADE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .termos-voltar,
+    .termos-contato {
+        transition: none;
+    }
+
+}
+
+/* LINK PARA POLÍTICA DE PRIVACIDADE */
+
+.termos-link-privacidade {
+    color: #A75B3B;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.termos-link-privacidade:hover {
+    color: #2F211B;
+}
+
+.termos-link-privacidade:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 3px;
+}
+
+/* LINKS DE CONTATO DA POLÍTICA DE PRIVACIDADE */
+.termos-secao a[href^="mailto:"] {
+    color: #A75B3B;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.termos-secao a[href^="mailto:"]:hover {
+    color: #2F211B;
+}
+
+.termos-secao a[href^="mailto:"]:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 4px;
+}
+

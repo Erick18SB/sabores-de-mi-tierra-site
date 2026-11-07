@@ -1,0 +1,816 @@
+<!DOCTYPE html> <!--Fala que esta usando HTML-->
+<html lang="pt-BR"> <!--É o principal da página, o lang é um atributo da TAG, vai indicar o idioma da pagina -->
+<head> <!--É o cabecario estrutural da pagina -->
+    <meta charset="UTF-8">
+        <!--O meta é responsavel por metadados da página, o charset é um elemento que define a codificação de caracteres da página, +sobre charset https://www.w3schools.com/html/html_charset.asp-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Instrui o navegador, especialmente em dispositivos móveis, a utilizar uma largura de viewport correspondente à largura do dispositivo em pixels CSS.-->
+    <title>Sabores De Mi Tierra</title>
+        <!--O title é o titulo da pagina, que aparece na aba do navegador, e tambem é usado para SEO-->
+    <meta name="description" content="Conheça o Sabores De Mi Tierra, restaurante especializado em comida tradicional boliviana.">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Turnstile: carregamento condicional pelo script.js, após cadastro-config.js. -->
+
+</head>
+<body>
+
+
+
+    <header class="site-header">
+    <div class="header-container">
+
+        <a href="index.html" class="logo" aria-label="Voltar &#224; tela inicial" title="Voltar &#224; tela inicial">
+            <img src="assets/images/logo.jpg" alt="Sabores De Mi Tierra">
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+        >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+
+    <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#localizacao">Localização</a>
+    </nav>
+
+        <a href="#localizacao" class="btn-contato">Contato</a>
+
+    </div>
+
+    <div class="linha-bolivia" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </header>
+
+        <main id="inicio">
+
+            <section class="hero" aria-label="Apresentação do restaurante">
+
+                <div class="carrossel">
+
+                    <div class="carrossel-imagens">
+
+                        <img
+                            src="assets/images/foto1.jpeg"
+                            alt="Fotografia do restaurante Sabores De Mi Tierra"
+                            class="slide ativo"
+                        >
+
+                        <img
+                            src="assets/images/foto2.jpeg"
+                            alt="Prato da culinária boliviana"
+                            class="slide"
+                        >
+
+                        <img
+                            src="assets/images/foto3.jpeg"
+                            alt="Ambiente do restaurante"
+                            class="slide"
+                        >
+
+                        <img
+                            src="assets/images/foto4.jpeg"
+                            alt="Espaço do restaurante"
+                            class="slide"
+                        >
+
+                    </div>
+
+                    <button class="carrossel-anterior"
+                            type="button"
+                            aria-label="Fotografia anterior">
+                        &#10094;
+                    </button>
+
+                    <button class="carrossel-proximo"
+                            type="button"
+                            aria-label="Próxima fotografia">
+                        &#10095;
+                    </button>
+
+                    <div class="carrossel-controles">
+
+                        <div class="carrossel-indicadores"
+                            aria-label="Indicadores do carrossel">
+                            <button type="button" class="indicador ativo" aria-label="Fotografia 1"></button>
+                            <button type="button" class="indicador" aria-label="Fotografia 2"></button>
+                            <button type="button" class="indicador" aria-label="Fotografia 3"></button>
+                            <button type="button" class="indicador" aria-label="Fotografia 4"></button>
+                        </div>
+
+                        <button class="carrossel-pausar"
+                                type="button"
+                                aria-label="Pausar carrossel">
+
+                            <span class="icone-pause" aria-hidden="true">❚❚</span>
+                            <span class="icone-play" aria-hidden="true">▶</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-conteudo">
+
+                    <h1>Tradição, sabor e cultura em cada prato.</h1>
+
+                    <p>
+                        Mais que uma refeição, uma experiência
+                        com a cultura boliviana.
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Sabores+De+Mi+Tierra+Comida+Boliviana+Barueri"
+                        class="hero-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Como chegar
+                    </a>
+                </div>
+            </section>
+
+            <!--section é uma TAG de seção, que é usada para agrupar conteúdo relacionado, e o id é um identificador único para a seção, que pode ser usado para navegação e estilização. A classe é usada para aplicar estilos CSS específicos a essa seção.-->
+            <section id="sobre" class="sobre">
+
+                    <div class="sobre-container">
+
+                        <div class="sobre-imagem">
+                            <img
+                                src="assets/images/SUA-FOTO.jpeg"
+                                alt="Ambiente do restaurante Sabores De Mi Tierra"
+                            >
+                        </div>
+
+                        <div class="sobre-conteudo">
+
+                            <h2>Sobre nós</h2>
+
+                            <h3>Viva um almoço especial, como se estivesse na Bolívia!</h3>
+
+                            <p>
+                                No Sabores De Mi Tierra, cada prato é um convite
+                                para conhecer os sabores e as tradições da culinária
+                                boliviana. Nosso restaurante familiar oferece comida
+                                caseira, preparada com carinho, para proporcionar uma
+                                experiência que vai além de uma simples refeição.
+                            </p>
+
+                            <p>
+                                Em um ambiente acolhedor, reunimos gastronomia,
+                                cultura e tradição para que você se sinta um pouquinho
+                                mais perto da Bolívia, sem sair de São Paulo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section id="diferenciais" class="diferenciais">
+
+                    <div class="diferenciais-container">
+
+                        <h2>Nossos diferenciais</h2>
+
+                        <p class="diferenciais-subtitulo">
+                            Mais que uma refeição, uma experiência
+                            com a cultura boliviana.
+                        </p>
+
+                        <div class="diferenciais-grid">
+
+                            <article class="diferencial-card">
+                                <span class="diferencial-icone" aria-hidden="true">🍲</span>
+                                <h3>Comida caseira</h3>
+                                <p>Sabores tradicionais da culinária boliviana.</p>
+                            </article>
+
+                            <article class="diferencial-card">
+                                <span class="diferencial-icone" aria-hidden="true">🏡</span>
+                                <h3>Ambiente familiar</h3>
+                                <p>Um espaço acolhedor para compartilhar bons momentos.</p>
+                            </article>
+
+                            <article class="diferencial-card">
+                                <span class="diferencial-icone" aria-hidden="true">🛵</span>
+                                <h3>Delivery</h3>
+                                <p>O sabor da Bolívia também para você aproveitar em casa.</p>
+                            </article>
+
+                            <article class="diferencial-card">
+                                <span class="diferencial-icone" aria-hidden="true">🗣️</span>
+                                <h3>Atendimento em espanhol</h3>
+                                <p>Um atendimento que aproxima você da cultura boliviana.</p>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- SEÇÃO GALERIA DE FOTOS -->
+                <section id="galeria" class="galeria">
+
+                    <div class="galeria-container">
+
+                        <h2>Galeria de fotos</h2>
+
+                        <p class="galeria-subtitulo">
+                            Conheça um pouco mais dos sabores,
+                            do ambiente e da tradição do Sabores De Mi Tierra.
+                        </p>
+
+                        <div class="galeria-grid">
+
+                            <img
+                                src="assets/images/foto1.jpeg"
+                                alt="Fotografia do restaurante"
+                                class="galeria-destaque"
+                                loading="lazy"
+                            >
+
+                            <img
+                                src="assets/images/foto2.jpeg"
+                                alt="Prato da culinária boliviana"
+                                loading="lazy"
+                            >
+
+                            <img
+                                src="assets/images/foto3.jpeg"
+                                alt="Ambiente do restaurante"
+                                loading="lazy"
+                            >
+
+                            <img
+                                src="assets/images/foto4.jpeg"
+                                alt="Espaço do restaurante"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- SEÇÃO DE NOVIDADES -->
+                <section id="novidades" class="novidades">
+
+                    <div class="novidades-container">
+
+                        <h2>Receba nossas novidades</h2>
+
+                        <p class="novidades-subtitulo">
+                            Cadastre-se para receber promoções,
+                            novidades e informações do Sabores De Mi Tierra.
+                        </p>
+
+                        <div class="cadastro-disponibilidade">
+                        <form class="formulario-novidades" method="post" novalidate
+                              inert aria-disabled="true" aria-describedby="cadastro-em-breve-descricao">
+                            <!--Agrupa os campos de um formulario -->
+                            <!--label identificao que o cliente deve preencher -->
+                            <!--input permite que insira os dados -->
+                            <div class="campo-formulario">
+
+                                <label for="nome">Nome completo *</label>
+
+                                    <!-- o pattern que define um padrão de preenchimento -->
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Ex.: Erick Souza (obrigatório)"
+                                        minlength="3"
+                                        maxlength="100"
+                                        autocomplete="name"
+                                        title="Informe nome e sobrenome, sem números."
+                                        required
+
+                                     disabled data-cadastro-pausado>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="email">E-mail</label>
+
+                                <!-- input permite que insira os dados -->
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="seuemail@exemplo.com (opcional)"
+                                    autocomplete="email"
+                                    maxlength="254"
+                                 disabled data-cadastro-pausado>
+                            </div>
+
+                            <!-- ANIVERSÁRIO (OPCIONAL) -->
+                            <div class="campo-formulario">
+
+                                <label for="aniversario">
+                                    Aniversário (opcional)
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="aniversario"
+                                    name="aniversario"
+                                    placeholder="DD/MM (ex.: 07/10)"
+                                    inputmode="numeric"
+                                    maxlength="5"
+                                    autocomplete="off"
+                                    pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])"
+                                    title="Informe somente o dia e o mês, no formato DD/MM."
+                                 disabled data-cadastro-pausado>
+
+                                <small>
+                                    Informe apenas o dia e o mês.
+                                    Não precisamos do ano de nascimento.
+                                </small>
+
+                            </div>
+
+                            <!-- CAMPOS DE TELEFONE -->
+                            <div class="telefones-grid">
+
+                                <!-- TELEFONE BRASILEIRO -->
+                                <div class="campo-formulario">
+
+                                    <label for="telefone">Telefone brasileiro *</label>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="(11) 99999-9999 (obrigatório)"
+                                        maxlength="15"
+                                        inputmode="numeric"
+                                        autocomplete="tel-national"
+                                        pattern="\([1-9][0-9]\) 9[0-9]{4}-[0-9]{4}"
+                                        required
+                                     disabled data-cadastro-pausado>
+
+                                    <!-- CHECKBOX ABAIXO DO TELEFONE BRASILEIRO -->
+                                    <div class="opcao-internacional">
+                                        <label for="telefone-internacional-check">
+                                            <input
+                                                type="checkbox"
+                                                id="telefone-internacional-check"
+                                             disabled data-cadastro-pausado>
+                                            Meu número é internacional (fora do Brasil)
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <!-- TELEFONE INTERNACIONAL -->
+                                <div class="campo-formulario">
+
+                                    <label for="pais-telefone">Telefone internacional *</label>
+
+                                    <select
+                                        id="pais-telefone"
+                                        name="pais_telefone"
+                                        disabled
+                                    >
+                                        <option value="">Selecione o país</option>
+                                        <option value="591">Bolívia (+591)</option>
+                                        <option value="54">Argentina (+54)</option>
+                                        <option value="1">Estados Unidos / Canadá (+1)</option>
+                                        <option value="34">Espanha (+34)</option>
+                                        <option value="52">México (+52)</option>
+                                        <option value="51">Peru (+51)</option>
+                                        <option value="56">Chile (+56)</option>
+                                    </select>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone-externo"
+                                        name="telefone_externo"
+                                        placeholder="Somente números (obrigatório)"
+                                        inputmode="numeric"
+                                        autocomplete="off"
+                                        disabled
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="opcoes-contato">
+
+                                <p class="opcoes-titulo">
+                                    Como deseja receber nossas novidades?
+                                </p>
+
+                                <label class="opcao-contato">
+                                    <input type="checkbox" name="receber_email" disabled data-cadastro-pausado>
+                                    <span>Quero receber novidades por e-mail</span>
+                                </label>
+
+                                <label class="opcao-contato">
+                                    <input type="checkbox" name="receber_whatsapp" disabled data-cadastro-pausado>
+                                    <span>Quero receber novidades por WhatsApp</span>
+                                </label>
+
+
+                                <p class="opcoes-descricao">
+                                    Escolha pelo menos um canal para receber nossas novidades
+                                    e promoções.
+                                </p>
+
+                                <!-- AUTORIZAÇÕES ADICIONAIS -->
+                                <div class="consentimentos-adicionais">
+
+                                    <p class="opcoes-titulo">
+                                        Outras autorizações (opcionais)
+                                    </p>
+
+                                    <label class="opcao-contato">
+                                        <input
+                                            type="checkbox"
+                                            id="consentimento-personalizacao"
+                                            name="consentimento_personalizacao"
+                                         disabled data-cadastro-pausado>
+                                        <span>
+                                            Autorizo receber campanhas personalizadas
+                                            de acordo com minhas preferências.
+                                        </span>
+                                    </label>
+
+                                    <label class="opcao-contato">
+                                        <input
+                                            type="checkbox"
+                                            id="consentimento-pesquisas"
+                                            name="consentimento_pesquisas"
+                                         disabled data-cadastro-pausado>
+                                        <span>
+                                            Autorizo receber convites para pesquisas
+                                            de satisfação.
+                                        </span>
+                                    </label>
+
+                                    <label class="opcao-contato">
+                                        <input
+                                            type="checkbox"
+                                            id="consentimento-aniversario"
+                                            name="consentimento_aniversario"
+                                         disabled data-cadastro-pausado>
+                                        <span>
+                                            Autorizo receber mensagens e ofertas
+                                            relacionadas ao meu aniversário.
+                                        </span>
+                                    </label>
+
+                                </div>
+
+                                <p class="opcoes-descricao">
+                                    Suas escolhas são opcionais e podem ser alteradas
+                                    ou revogadas posteriormente.
+                                    Saiba mais em nossa
+                                    <a href="privacidade.html" target="_blank" rel="noopener noreferrer">
+                                        Política de Privacidade
+                                    </a>.
+                                </p>
+
+
+                            </div>
+
+                            <!-- CONFIRMAÇÃO OBRIGATÓRIA DA POLÍTICA DE PRIVACIDADE -->
+                            <div class="aceite-privacidade">
+
+                                <label for="aceite-politica">
+
+                                    <input
+                                        type="checkbox"
+                                        id="aceite-politica"
+                                        name="aceite_politica"
+                                        required
+                                     disabled data-cadastro-pausado>
+
+                                    <span>
+                                        Confirmo que li e estou ciente da
+                                        <a
+                                            href="privacidade.html"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Política de Privacidade
+                                        </a>
+                                        do Sabores De Mi Tierra.
+                                        <strong>*</strong>
+                                    </span>
+
+                                </label>
+
+                                <!-- PROTEÇÃO ANTI-BOT CLOUDFLARE TURNSTILE -->
+                                <div
+                                    class="cf-turnstile"
+                                    data-sitekey="0x4AAAAAAFpvjXEtpYBTfoiJ"
+                                    data-action="cadastro">
+                                </div>
+
+                            </div>
+
+
+                            <button type="submit" class="btn-novidades" disabled data-cadastro-pausado>
+                                Cadastrar e receber novidades
+                            </button>
+
+                        </form>
+                        <div class="cadastro-em-breve" role="status" aria-live="polite" aria-atomic="true">
+                            <div class="cadastro-em-breve-mensagem">
+                                <h3>Em breve</h3>
+                                <p id="cadastro-em-breve-descricao">Estamos preparando nosso cadastro para novidades e promoções. Volte em breve!</p>
+                            </div>
+                        </div>
+                        </div>
+
+                          <!-- JANELA DE VALIDAÇÃO -->
+                        <dialog id="modal-validacao" class="modal-validacao">
+
+                            <h3>Verifique seus dados</h3>
+
+                            <p id="mensagem-validacao"></p>
+
+                            <button type="button" id="fechar-modal">
+                                Entendi, vou corrigir
+                            </button>
+
+                        </dialog>
+
+                        <!-- JANELA DE SUCESSO -->
+                        <dialog id="modal-sucesso" class="modal-validacao modal-sucesso">
+
+                            <div class="sucesso-icone" aria-hidden="true">✓</div>
+
+                            <h3>Cadastro confirmado!</h3>
+
+                            <p>
+                                Seu cadastro e suas escolhas de comunicação foram confirmados.
+                            </p>
+
+                            <button type="button" id="fechar-sucesso">
+                                Entendi
+                            </button>
+
+                        </dialog>
+
+                    </div>
+
+                </section>
+
+                <!-- LOCALIZAÇÃO E CONTATO -->
+                <section id="localizacao" class="localizacao">
+
+                    <div class="container">
+
+                        <div class="localizacao-cabecalho">
+
+                            <span class="localizacao-etiqueta">
+                                VENHA NOS VISITAR
+                            </span>
+
+                            <h2>Localização e contato</h2>
+
+                            <p>
+                                Estamos esperando por você para compartilhar
+                                os sabores e tradições da Bolívia.
+                            </p>
+
+                        </div>
+
+                        <div class="localizacao-grid">
+
+                            <!-- COLUNA ESQUERDA -->
+                            <div class="localizacao-principal">
+
+                        <div class="mapa-restaurante">
+
+                            <!-- iframe: incorpora o mapa diretamente na página. -->
+                            <iframe
+                                src="https://www.google.com/maps?q=-23.4963814,-46.8498713&z=17&output=embed"
+                                title="Localização do restaurante Sabores De Mi Tierra"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+
+                        <div class="localizacao-detalhes">
+
+                            <h3>📍 Sabores De Mi Tierra</h3>
+
+                            <p>
+                                Calçada das Azaléias, n° 15 - Centro - Alphaville Comercial, Barueri - SP, 06453-035
+                            </p>
+
+                            <h4>🕒 Horário de funcionamento</h4>
+
+                            <div class="horarios">
+                                <p>Segunda a quinta-feira: <strong>Fechado</strong></p>
+                                <p>Sexta-feira: <strong>10h às 15h</strong></p>
+                                <p>Sábado: <strong>10h às 17h</strong></p>
+                                <p>Domingo: <strong>10h às 17h</strong></p>
+                            </div>
+
+                            <div class="botoes-localizacao">
+
+                                <a href="https://wa.me/5511955898944"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="botao-whatsapp">
+                                    Fale conosco pelo WhatsApp
+                                </a>
+
+                                <a href="https://www.google.com/maps/search/?api=1&query=Sabores+De+Mi+Tierra+Alphaville+Barueri"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="botao-rota">
+                                    Como chegar
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                            <!-- COLUNA DIREITA -->
+                            <aside class="localizacao-informacoes">
+
+                                <h3>Saiba mais</h3>
+
+                                <div class="lista-informacoes">
+
+                                    <div class="informacao-item">
+                                        <span class="informacao-icone">🛵</span>
+                                        <div>
+                                            <h4>Delivery</h4>
+                                            <p>O sabor boliviano também pode chegar até você.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="informacao-item">
+                                        <span class="informacao-icone">🏡</span>
+                                        <div>
+                                            <h4>Ambiente familiar</h4>
+                                            <p>Um espaço acolhedor para todas as idades.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="informacao-item">
+                                        <span class="informacao-icone">🎵</span>
+                                        <div>
+                                            <h4>Música ao vivo</h4>
+                                            <p>Em alguns domingos do mês, nossa alegria ganha uma trilha sonora especial.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="informacao-item">
+                                        <span class="informacao-icone">❤️</span>
+                                        <div>
+                                            <h4>Tradição boliviana</h4>
+                                            <p>Receitas caseiras, temperos tradicionais e um atendimento acolhedor.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="localizacao-redes">
+
+                                    <h4>Acompanhe nossas redes</h4>
+
+                                    <p>Siga nossos sabores e novidades!</p>
+
+                                    <div class="botoes-redes">
+
+                                        <a
+                                            href="https://www.instagram.com/saboresdemitierra.alpha/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Instagram do Sabores De Mi Tierra"
+                                            title="Instagram"
+                                        >
+                                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                        </a>
+
+                                        <a
+                                            href="https://www.tiktok.com/@saboresdemitierra_ofc"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="TikTok do Sabores De Mi Tierra"
+                                            title="TikTok"
+                                        >
+                                            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </aside>
+
+                        </div>
+
+                    </div>
+
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <div class="footer-container">
+
+                    <div class="footer-coluna">
+                        <h3>Sabores De Mi Tierra</h3>
+                        <p>
+                            Um pedacinho da Bolívia em São Paulo.
+                            Tradição, carinho e sabores que aproximam pessoas.
+                        </p>
+                    </div>
+
+                    <div class="footer-coluna">
+                        <h3>Links rápidos</h3>
+
+
+                    <nav class="footer-links" aria-label="Links do rodapé">
+                        <a href="index.html">Tela inicial</a>
+                        <a href="#sobre">Sobre nós</a>
+                        <a href="#diferenciais">Diferenciais</a>
+                        <a href="#galeria">Galeria</a>
+                        <a href="#localizacao">Contato</a>
+                        <a href="termos.html" class="footer-link-legal">Termos de Uso</a>
+                        <a href="privacidade.html" class="footer-link-legal">Política de Privacidade</a>
+                    </nav>
+
+                    </div>
+
+                    <div class="footer-coluna">
+                        <h3>Funcionamento</h3>
+
+                        <p>Segunda a quinta: Fechado</p>
+                        <p>Sexta: 10h às 15h</p>
+                        <p>Sábado e domingo: 10h às 17h</p>
+                    </div>
+
+                    <div class="footer-coluna">
+                        <h3>Acompanhe-nos</h3>
+
+                        <div class="footer-redes">
+                            <a href="https://www.instagram.com/saboresdemitierra.alpha/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@saboresdemitierra_ofc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer-inferior">
+                    <p>© 2026 Sabores De Mi Tierra. © Todos os direitos reservados. © Erick Souza Bernardes ©</p>
+                </div>
+
+                <div class="linha-bolivia" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </footer>
+
+        <script src="cadastro-config.js"></script>
+        <script src="cadastro-validacao.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

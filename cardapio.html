@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio | Sabores De Mi Tierra</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+
+<body>
+
+    <main class="pagina-cardapio">
+
+        
+        <section class="cardapio-apresentacao">
+
+            <a href="index.html" class="cardapio-voltar">
+                <span aria-hidden="true">←</span>
+                <span>Voltar à tela inicial</span>
+            </a>
+
+            <span class="cardapio-etiqueta">
+                <span class="nome-vermelho">SABORES</span>
+                <span class="nome-amarelo">DE MI</span>
+                <span class="nome-verde">TIERRA</span>
+            </span>
+
+            <h1>Nosso Cardápio</h1>
+
+        </section>
+
+        <section class="cardapio-conteudo">
+
+            <!-- PESQUISA DE PRODUTOS -->
+        <div class="cardapio-pesquisa">
+
+            <label for="pesquisa-produtos">
+                Encontre seu prato ou bebida favorita
+            </label>
+
+            <div class="cardapio-pesquisa-campo">
+
+                <input
+                    type="search"
+                    id="pesquisa-produtos"
+                    placeholder="Pesquise pelo nome do produto..."
+                    autocomplete="off"
+                    enterkeyhint="search"
+                    aria-controls="sugestoes-pesquisa"
+                    aria-expanded="false"
+                >
+
+                <!-- SUGESTÕES AUTOMÁTICAS DE PESQUISA -->
+                <div
+                    id="sugestoes-pesquisa"
+                    class="sugestoes-pesquisa"
+                    hidden
+                ></div>
+
+            </div>
+
+            <!-- BOTÃO PARA RESTAURAR O CARDÁPIO -->
+            <button
+                type="button"
+                id="mostrar-todos-produtos"
+                class="mostrar-todos-produtos"
+                hidden
+            >
+                Mostrar todos os produtos
+            </button>
+
+        </div>
+
+            <!-- Aqui ficarão os filtros de categorias -->
+            <!-- FILTROS DO CARDÁPIO -->
+
+            <div class="cardapio-categorias" aria-label="Categorias do cardápio">
+
+                <button type="button" class="categoria-btn ativo" data-categoria="todos">
+                    Todos
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="principais">
+                    Pratos principais
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="especiais">
+                    Especiais da casa
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="mensais">
+                    Especiais do Mês
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="entradas">
+                    Entradas
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="porcoes">
+                    Porções
+                </button>
+
+                <button type="button" class="categoria-btn" data-categoria="bebidas">
+                    Bebidas
+                </button>
+
+            </div>
+
+            <!-- FILTROS EXCLUSIVOS DE BEBIDAS -->
+            <div id="filtros-bebidas" class="filtros-bebidas" hidden>
+
+                <button type="button" class="filtro-bebida ativo" data-bebida="todas">
+                    Todas
+                </button>
+
+                <button type="button" class="filtro-bebida" data-bebida="bolivianas">
+                    Bolivianas
+                </button>
+
+                <button type="button" class="filtro-bebida" data-bebida="alcoolicas">
+                    Alcoólicas
+                </button>
+
+                <button type="button" class="filtro-bebida" data-bebida="nao_alcoolicas">
+                    Não alcoólicas
+                </button>
+
+                <button type="button" class="filtro-bebida" data-bebida="coqueteis">
+                    Coquetéis
+                </button>
+
+            </div>
+
+            <div class="cardapio-aviso">
+
+                <div class="cardapio-aviso-texto">
+                    <h2>Consulte a disponibilidade</h2>
+
+                    <p>
+                        Alguns pratos são preparados apenas em dias específicos.
+                        Nossos Especiais do Mês são preparados aproximadamente
+                        uma vez por mês. Consulte a disponibilidade e os preços
+                        pendentes antes de visitar o restaurante.
+                    </p>
+                </div>
+
+                <a
+                    href="https://wa.me/5511955898944?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20a%20disponibilidade%20dos%20pratos%20do%20card%C3%A1pio."
+                    class="cardapio-aviso-botao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consultar pelo WhatsApp
+                </a>
+
+            </div>
+
+            <div class="cardapio-produtos" id="lista-produtos">
+                <!-- Os cartões serão criados pelo JavaScript -->
+            </div>
+
+            <!-- MENSAGEM QUANDO NENHUM PRODUTO FOR ENCONTRADO -->
+            <div id="nenhum-produto" class="nenhum-produto" role="status" hidden>
+
+                <h3>Nenhum produto encontrado</h3>
+
+                <p>
+                    Não encontramos pratos ou bebidas com esse nome.
+                    Tente pesquisar de outra forma.
+                </p>
+
+                <!-- BOTÃO PARA LIMPAR A PESQUISA -->
+                <button
+                    type="button"
+                    id="limpar-pesquisa"
+                    class="limpar-pesquisa"
+                >
+                    Limpar pesquisa
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JANELA DE DETALHES DO PRATO -->
+
+    <div class="modal-overlay" id="modal-prato" hidden>
+
+        <div
+            class="modal-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-titulo"
+        >
+
+            <button
+                class="modal-fechar"
+                id="modal-fechar"
+                type="button"
+                aria-label="Fechar detalhes do prato"
+            >
+                &times;
+            </button>
+
+            <div class="modal-imagem">
+                <img
+                    id="modal-foto"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Ampliar fotografia do prato"
+                    aria-haspopup="dialog"
+                    src=""
+                    alt=""
+                    hidden
+                >
+
+                <div id="modal-sem-imagem">
+                    Foto em breve
+                </div>
+            </div>
+
+            <div class="modal-informacoes">
+
+                <span class="modal-categoria">
+                    Pratos principais
+                </span>
+
+                <!-- Selos especiais do produto -->
+                <div class="modal-selos" id="modal-selos"></div>
+
+                <h2 id="modal-titulo">
+                    Pique a lo Macho Grande
+                </h2>
+
+                <p class="modal-descricao">
+                    Em breve, você poderá conhecer todos os detalhes
+                    deste prato tradicional da culinária boliviana.
+                </p>
+
+                <div class="modal-rodape">
+                    <strong>R$ 150,00</strong>
+                    <span>Disponibilidade a confirmar</span>
+                </div>
+
+                <!-- CONTATO PERSONALIZADO DO PRODUTO -->
+                <a
+                    id="modal-whatsapp"
+                    class="modal-whatsapp"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consultar pelo WhatsApp
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Visualizador de imagem ampliada -->
+    <div class="foto-overlay" id="foto-overlay" hidden>
+
+        <div class="foto-visualizador" role="dialog" aria-modal="true" aria-label="Fotografia ampliada do prato">
+
+            <button
+                class="foto-fechar"
+                id="foto-fechar"
+                type="button"
+                aria-label="Fechar imagem ampliada"
+            >
+                &times;
+            </button>
+
+            <img id="foto-ampliada" src="" alt="">
+
+        </div>
+
+    </div>
+
+    <script src="cardapio.js"></script>
+
+    <!-- RODAPÉ DO CARDÁPIO -->
+    <footer class="cardapio-footer">
+
+        <div class="cardapio-footer-conteudo">
+
+            <h2>Sabores De Mi Tierra</h2>
+
+            <p>
+                Mais que uma refeição, uma experiência
+                com a cultura boliviana.
+            </p>
+
+            <nav class="cardapio-footer-links"
+                aria-label="Links legais do cardápio">
+
+                <a href="site.html">Site institucional</a>
+
+                <a href="termos.html">Termos de Uso</a>
+
+                <a href="privacidade.html">
+                    Política de Privacidade
+                </a>
+
+            </nav>
+
+            <p class="cardapio-footer-copyright">
+                © 2026 Sabores De Mi Tierra.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+        <div class="cardapio-footer-bolivia"
+            aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </footer>
+
+</body>
+</html>

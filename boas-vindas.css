@@ -1,0 +1,81 @@
+/* Somente a tela de entrada; o institucional e o cardápio não carregam este CSS. */
+.pagina-boas-vindas { color: #2F211B; background-color: #F5EBDD; }
+
+.boas-vindas {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(32px, 6vw, 88px);
+    width: min(100%, 1200px);
+    min-height: calc(100vh - 4px);
+    min-height: calc(100svh - 4px);
+    margin: 0 auto;
+    padding: clamp(24px, 4vw, 56px);
+}
+.boas-vindas-conteudo { min-width: 0; }
+.boas-vindas-marca { display: flex; align-items: center; gap: 16px; margin-bottom: clamp(28px, 4vw, 48px); }
+.boas-vindas-marca img { display: block; border-radius: 50%; flex-shrink: 0; }
+.boas-vindas-marca p { margin: 0; font-size: 14px; font-weight: bold; line-height: 1.6; }
+.boas-vindas-marca p span { color: #655247; font-weight: normal; }
+.boas-vindas-saudacao { margin: 0 0 18px; color: #8F492E; font-size: 12px; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; }
+.boas-vindas h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5.8vw, 72px);
+    font-weight: normal;
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+}
+.boas-vindas-introducao { margin: 24px 0 32px; color: #655247; font-size: 16px; line-height: 1.7; }
+.boas-vindas-opcoes { display: grid; gap: 14px; }
+.boas-vindas-opcao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 92px;
+    padding: 20px 24px;
+    border: 1px solid #A75B3B;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.boas-vindas-opcao-site { background-color: #8F492E; color: #FFFFFF; }
+.boas-vindas-opcao-cardapio { background-color: #FFF9F2; color: #2F211B; }
+.boas-vindas-opcao > span:first-child { min-width: 0; }
+.boas-vindas-opcao strong { display: block; font-size: 19px; line-height: 1.3; }
+.boas-vindas-opcao strong + span { display: block; margin-top: 6px; font-size: 13px; line-height: 1.5; }
+.boas-vindas-seta { flex-shrink: 0; font-size: 28px; }
+.boas-vindas a:focus-visible { outline: 3px solid #2F211B; outline-offset: 5px; }
+.boas-vindas-legais { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 30px; }
+.boas-vindas-legais a { padding: 8px 0; color: #655247; font-size: 12px; line-height: 1.5; text-underline-offset: 4px; }
+.boas-vindas-foto {
+    position: relative;
+    align-self: stretch;
+    min-height: 520px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 160px 20px 20px 20px;
+    background-color: #2F211B;
+}
+.boas-vindas-foto img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.boas-vindas-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(25, 16, 12, 0.88)); }
+.boas-vindas-foto figcaption { position: absolute; z-index: 1; right: 28px; bottom: 32px; left: 28px; color: #FFFFFF; font-family: Georgia, serif; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.3; }
+
+@media (hover: hover) {
+    .boas-vindas-opcao:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(47, 33, 27, 0.14); }
+    .boas-vindas-legais a:hover { color: #8F492E; }
+}
+@media (max-width: 760px) {
+    .boas-vindas { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 28px 20px; }
+    .boas-vindas-marca { margin-bottom: 28px; }
+    .boas-vindas-marca img { width: 64px; height: 64px; }
+    .boas-vindas h1 { font-size: clamp(40px, 11vw, 64px); }
+    .boas-vindas-opcao { padding: 18px; }
+    .boas-vindas-foto { min-height: 280px; border-radius: 80px 16px 16px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .boas-vindas-opcao { transition: none; }
+    .boas-vindas-opcao:hover { transform: none; }
+}

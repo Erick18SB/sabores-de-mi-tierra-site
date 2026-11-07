@@ -1,0 +1,1758 @@
+/* ========================================
+   CARDÁPIO - CONFIGURAÇÕES GERAIS
+======================================== */
+
+.pagina-cardapio {
+    min-height: 100vh;
+    background-color: #F5EBDD;
+    color: #2F211B;
+}
+
+/* ========================================
+   APRESENTAÇÃO DO CARDÁPIO
+======================================== */
+
+.cardapio-apresentacao {
+    padding: 55px 20px 10px;
+    text-align: center;
+    background-color: #F5EBDD;
+}
+
+.cardapio-etiqueta {
+    display: block;
+    margin-bottom: 14px;
+
+    color: #A75B3B;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.cardapio-apresentacao h1 {
+    margin: 0 0 18px;
+
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 46px;
+    line-height: 1.2;
+}
+
+.cardapio-apresentacao p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: #6B584D;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   ÁREA DOS PRODUTOS
+======================================== */
+
+.cardapio-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px 80px;
+}
+
+.cardapio-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 36px;
+}
+
+.cardapio-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* ========================================
+   RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .cardapio-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cardapio-apresentacao h1 {
+        font-size: 38px;
+    }
+
+}
+
+/* ========================================
+   CARTÕES DOS PRODUTOS
+======================================== */
+
+.cardapio-item {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(47, 33, 27, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.cardapio-item-imagem {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #EADCCD;
+    overflow: hidden;
+}
+
+.cardapio-item-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardapio-item-conteudo {
+    padding: 22px;
+}
+
+.cardapio-item-categoria {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #A75B3B;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cardapio-item-conteudo h3 {
+    margin: 0 0 12px;
+
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.cardapio-item-conteudo p {
+    margin: 0 0 20px;
+
+    color: #6B584D;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cardapio-item-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    padding-top: 16px;
+    border-top: 1px solid #EADCCD;
+}
+
+.cardapio-item-rodape strong {
+    color: #A75B3B;
+    font-size: 22px;
+}
+
+.cardapio-item-rodape span {
+    color: #6B584D;
+    font-size: 12px;
+}
+
+@media (hover: hover) {
+    .cardapio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(47, 33, 27, 0.15);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardapio-item {
+        transition: none;
+    }
+}
+
+/* ========================================
+   FILTROS DO CARDÁPIO
+======================================== */
+
+.categoria-btn {
+    padding: 12px 20px;
+    border: 1px solid #EADCCD;
+    border-radius: 30px;
+
+    background-color: #FFFFFF;
+    color: #2F211B;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.categoria-btn.ativo {
+    background-color: #A75B3B;
+    border-color: #A75B3B;
+    color: #FFFFFF;
+}
+
+@media (hover: hover) {
+    .categoria-btn:hover {
+        background-color: #A75B3B;
+        border-color: #A75B3B;
+        color: #FFFFFF;
+        transform: translateY(-2px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .categoria-btn {
+        transition: none;
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .cardapio-apresentacao {
+        padding: 48px 20px 32px;
+    }
+
+    .cardapio-apresentacao h1 {
+        font-size: 32px;
+    }
+
+    .cardapio-apresentacao p {
+        font-size: 14px;
+    }
+
+    .cardapio-conteudo {
+        padding: 16px 16px 60px;
+    }
+
+    .cardapio-produtos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+}
+
+.cardapio-item[hidden] {
+    display: none;
+}
+
+/* FOTOGRAFIAS AINDA NÃO CADASTRADAS */
+
+.cardapio-sem-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #EADCCD;
+    color: #6B584D;
+    font-size: 14px;
+}
+
+/* SELO DOS PRATOS ESPECIAIS */
+
+.cardapio-selo {
+    display: inline-block;
+    margin: 0 0 10px 8px;
+    padding: 5px 9px;
+
+    background-color: #F5EBDD;
+    color: #A75B3B;
+
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* OCULTAÇÃO DOS PRODUTOS FILTRADOS */
+
+.cardapio-item[hidden] {
+    display: none;
+}
+
+/* SELO ESPECIAL DO MÊS */
+
+.cardapio-selo-mensal {
+    background-color: #A75B3B;
+    color: #FFFFFF;
+    margin-left: 5px;
+}
+
+/* AVISO DE DISPONIBILIDADE */
+
+.cardapio-aviso {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 24px;
+    margin-bottom: 32px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #EADCCD;
+    border-left: 4px solid #A75B3B;
+    border-radius: 12px;
+}
+
+.cardapio-aviso-texto h2 {
+    margin: 0 0 8px;
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.cardapio-aviso-texto p {
+    margin: 0;
+    color: #6B584D;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cardapio-aviso-botao {
+    flex-shrink: 0;
+    padding: 13px 18px;
+
+    background-color: #A75B3B;
+    color: #FFFFFF;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+    .cardapio-aviso-botao:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(47, 33, 27, 0.20);
+    }
+}
+
+@media (max-width: 768px) {
+    .cardapio-aviso {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .cardapio-aviso-botao {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardapio-aviso-botao {
+        transition: none;
+    }
+}
+
+/* ========================================
+   MODAL DE DETALHES DO PRATO
+======================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* Mantém o modal escondido quando necessário */
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-conteudo {
+    position: relative;
+
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background-color: #FFFFFF;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFFFFF;
+    color: #2F211B;
+
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.modal-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 230px;
+
+    background-color: #EADCCD;
+    color: #6B584D;
+}
+
+.modal-informacoes {
+    padding: 28px;
+}
+
+.modal-categoria {
+    color: #A75B3B;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.modal-informacoes h2 {
+    margin: 12px 0;
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.modal-descricao {
+    color: #6B584D;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.modal-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 1px solid #EADCCD;
+}
+
+.modal-rodape strong {
+    color: #A75B3B;
+    font-size: 24px;
+}
+
+.modal-rodape span {
+    color: #6B584D;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .modal-imagem {
+        height: 180px;
+    }
+
+    .modal-informacoes {
+        padding: 20px;
+    }
+
+    .modal-informacoes h2 {
+        font-size: 24px;
+    }
+
+    .modal-rodape {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========================================
+   IMAGEM CLICÁVEL DO PRATO
+======================================== */
+
+.cardapio-item-imagem {
+    cursor: pointer;
+}
+
+/* ========================================
+   INDICADOR VER DETALHES
+======================================== */
+
+.cardapio-ver-detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+
+    margin-top: 15px;
+    padding-top: 12px;
+
+    border-top: 1px solid #EADCCD;
+
+    color: #A75B3B;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cardapio-ver-detalhes span:last-child {
+    font-size: 18px;
+}
+
+/* EFEITO VISUAL NA IMAGEM */
+
+@media (hover: hover) {
+    .cardapio-item-imagem {
+        transition: filter 0.3s ease;
+    }
+
+    .cardapio-item-imagem:hover {
+        filter: brightness(0.94);
+    }
+}
+
+/* TEXTO VER DETALHES CLICÁVEL */
+
+.cardapio-ver-detalhes {
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .cardapio-ver-detalhes:hover {
+        color: #2F211B;
+    }
+}
+
+/* ========================================
+   DESTAQUE DO BOTÃO FECHAR MODAL
+======================================== */
+
+@keyframes destacarBotaoFechar {
+    0%, 100% {
+        background-color: #FFFFFF;
+        box-shadow: 0 0 0 0 rgba(167, 91, 59, 0);
+        transform: scale(1);
+    }
+
+    40% {
+        background-color: #A75B3B;
+        color: #FFFFFF;
+        box-shadow: 0 0 0 8px rgba(167, 91, 59, 0.18);
+        transform: scale(1.15);
+    }
+}
+
+.modal-fechar.destaque-fechar {
+    animation: destacarBotaoFechar 0.65s ease-in-out 2;
+}
+
+/* Destaque também para quem navega pelo teclado */
+
+.modal-fechar:focus-visible {
+    outline: 3px solid #A75B3B;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-fechar.destaque-fechar {
+        animation: none;
+        background-color: #A75B3B;
+        color: #FFFFFF;
+        outline: 3px solid #A75B3B;
+        outline-offset: 3px;
+    }
+}
+
+/* ========================================
+   SELOS ESPECIAIS DO MODAL
+======================================== */
+
+.modal-selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.modal-selos:empty {
+    display: none;
+}
+
+.modal-selo {
+    display: inline-block;
+    padding: 6px 12px;
+
+    background-color: #F5EBDD;
+    color: #A75B3B;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.modal-selo-mensal {
+    background-color: #A75B3B;
+    color: #FFFFFF;
+}
+
+/* ========================================
+   BOTÃO WHATSAPP DO MODAL
+======================================== */
+
+.modal-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px 20px;
+
+    background-color: #A75B3B;
+    color: #FFFFFF;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+    .modal-whatsapp:hover {
+        background-color: #85452D;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(47, 33, 27, 0.20);
+    }
+}
+
+.modal-whatsapp:focus-visible {
+    outline: 3px solid #2F211B;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-whatsapp {
+        transition: none;
+    }
+}
+
+/* ========================================
+   DESTAQUE DOS NOMES DOS PRODUTOS
+======================================== */
+
+/*========================================
+    Nome do produto no cartão 
+========================================*/
+.cardapio-item-conteudo h3 {
+    font-weight: 700;
+}
+
+/* ========================================
+    Nome do produto dentro do modal 
+========================================*/
+.modal-informacoes h2 {
+    font-weight: 700;
+}
+
+.cardapio-item-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardapio-sem-imagem[hidden] {
+    display: none;
+}
+
+/* Imagem dos produtos dentro do modal */
+
+.modal-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Respeita o atributo hidden */
+
+.modal-imagem [hidden] {
+    display: none;
+}
+
+/* Imagens dos produtos */
+
+.cardapio-item-imagem {
+    overflow: hidden;
+}
+
+.cardapio-item-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+/* Zoom suave ao passar o mouse */
+
+@media (hover: hover) {
+    .cardapio-item-imagem:hover img {
+        transform: scale(1.06);
+    }
+}
+
+/* Imagem ampliada no modal */
+
+.modal-imagem {
+    overflow: hidden;
+}
+
+.modal-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Respeita imagens ocultas */
+
+.modal-imagem [hidden] {
+    display: none;
+}
+
+/* VISUALIZADOR DE FOTO AMPLIADA */
+
+.foto-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.foto-overlay[hidden] {
+    display: none;
+}
+
+.foto-visualizador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+.foto-visualizador img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.foto-fechar {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 1;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #F5EBDD;
+    color: #2F211B;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.foto-fechar:hover {
+    background: #A75B3B;
+    color: white;
+}
+
+/* Indica que a foto pode ser ampliada */
+
+.modal-imagem img:not([hidden]) {
+    cursor: zoom-in;
+}
+
+/* Destaque do botão X ao clicar fora da foto */
+
+.foto-fechar.destaque-fechar {
+    animation: destaqueFecharFoto 0.5s ease;
+}
+
+@keyframes destaqueFecharFoto {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: #A75B3B;
+        color: #FFFFFF;
+    }
+
+}
+
+/* AJUSTES DOS MODAIS PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    /* Modal de detalhes do prato */
+
+    .modal-conteudo {
+        width: 100%;
+        max-height: 90dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    /* Imagem do prato */
+
+    .modal-imagem {
+        min-height: 180px;
+    }
+
+    /* Botão de fechar */
+
+    .modal-fechar {
+        z-index: 10;
+    }
+
+    /* Visualizador de fotos */
+
+    .foto-overlay {
+        padding: 16px;
+    }
+
+    .foto-visualizador {
+        max-width: 100%;
+        max-height: 85dvh;
+    }
+
+    .foto-visualizador img {
+        max-width: 100%;
+        max-height: 80dvh;
+        object-fit: contain;
+    }
+
+    /* Botão de fechar da foto ampliada */
+
+    .foto-fechar {
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+/* ========================================
+   SUBFILTROS DE BEBIDAS
+   ESTILO DE ABAS
+======================================== */
+
+.filtros-bebidas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+
+    margin: 20px 0 32px;
+    padding: 12px 18px 0;
+
+    background-color: #DDC7B3;
+    border-radius: 12px;
+}
+
+.filtros-bebidas[hidden] {
+    display: none;
+}
+
+.filtro-bebida {
+    position: relative;
+    padding: 12px 4px 16px;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+
+    color: #6B584D;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.filtro-bebida::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: #A75B3B;
+    border-radius: 3px 3px 0 0;
+
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.filtro-bebida:hover {
+    color: #A75B3B;
+}
+
+.filtro-bebida.ativo {
+    color: #2F211B;
+    font-weight: 700;
+}
+
+.filtro-bebida.ativo::after {
+    transform: scaleX(1);
+}
+
+.filtro-bebida:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    .filtros-bebidas {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 22px;
+
+        padding: 10px 14px 0;
+        margin: 16px 0 24px;
+
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filtro-bebida {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filtro-bebida,
+    .filtro-bebida::after {
+        transition: none;
+    }
+}
+
+/* ========================================
+   SELO - SOMENTE NO LOCAL
+======================================== */
+
+.cardapio-selo-local {
+    display: inline-block;
+
+    margin: 0 0 12px;
+    padding: 7px 12px;
+
+    background-color: #C66A32;
+    color: #FFFFFF;
+
+    border: 1px solid #C66A32;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   SELO SOMENTE NO LOCAL - MODAL
+======================================== */
+
+.modal-selo-local {
+    background-color: #C66A32;
+    color: #FFFFFF;
+
+    border: 1px solid #C66A32;
+    border-radius: 6px;
+
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* ========================================
+   PESQUISA DE PRODUTOS
+======================================== */
+
+.cardapio-pesquisa {
+    max-width: 650px;
+    margin: 15px auto 55px;
+    text-align: center;
+}
+
+/* ========================================
+   BOTÃO MOSTRAR TODOS OS PRODUTOS
+======================================== */
+
+.mostrar-todos-produtos {
+    display: block;
+    margin: 18px auto 0;
+    padding: 10px 18px;
+
+    background-color: transparent;
+    border: 1px solid #A75B3B;
+    border-radius: 8px;
+
+    color: #A75B3B;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mostrar-todos-produtos:hover {
+    background-color: #A75B3B;
+    color: #FFFFFF;
+}
+
+.mostrar-todos-produtos:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 3px;
+}
+
+/* Garante que o botão fique oculto quando necessário */
+.mostrar-todos-produtos[hidden] {
+    display: none;
+}
+
+.cardapio-pesquisa label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cardapio-pesquisa p {
+    margin: 0 0 18px;
+
+    color: #6B584D;
+    font-size: 14px;
+}
+
+.cardapio-pesquisa-campo {
+    position: relative;
+}
+
+/* ========================================
+   SUGESTÕES AUTOMÁTICAS DE PESQUISA
+======================================== */
+
+.sugestoes-pesquisa {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    padding: 6px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #D8C5B4;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px rgba(47, 33, 27, 0.14);
+
+    text-align: left;
+}
+
+.sugestoes-pesquisa[hidden] {
+    display: none;
+}
+
+/* Cada sugestão apresentada */
+
+.sugestao-item {
+    display: block;
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+
+    color: #2F211B;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Destaque ao passar o mouse ou navegar pelo teclado */
+
+.sugestao-item:hover,
+.sugestao-item:focus-visible,
+.sugestao-item.ativo {
+    background-color: #F5EBDD;
+    color: #A75B3B;
+}
+
+.sugestao-item:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: -2px;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+
+    .sugestoes-pesquisa {
+        max-height: 240px;
+    }
+
+    .sugestao-item {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sugestao-item {
+        transition: none;
+    }
+}
+
+#pesquisa-produtos {
+    width: 100%;
+    padding: 16px 20px;
+
+    background-color: #FFFFFF;
+    color: #2F211B;
+
+    border: 1px solid #D8C5B4;
+    border-radius: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#pesquisa-produtos:focus {
+    border-color: #A75B3B;
+    box-shadow: 0 0 0 3px rgba(167, 91, 59, 0.15);
+}
+
+#pesquisa-produtos::placeholder {
+    color: #8A7A70;
+}
+
+@media (max-width: 600px) {
+
+    .cardapio-pesquisa {
+        margin-bottom: 28px;
+    }
+
+    .cardapio-pesquisa label {
+        font-size: 16px;
+    }
+
+    #pesquisa-produtos {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   DESTAQUE DO PRODUTO PESQUISADO
+======================================== */
+
+.cardapio-item.produto-destacado {
+    animation: destacarProduto 2.5s ease;
+}
+
+@keyframes destacarProduto {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(167, 91, 59, 0);
+    }
+
+    20% {
+        box-shadow: 0 0 0 4px rgba(167, 91, 59, 0.65);
+    }
+
+    75% {
+        box-shadow: 0 0 0 4px rgba(167, 91, 59, 0.65);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(167, 91, 59, 0);
+    }
+}
+
+/* Respeita a preferência por movimento reduzido */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cardapio-item.produto-destacado {
+        animation: none;
+        outline: 3px solid #A75B3B;
+        outline-offset: 3px;
+    }
+}
+
+/* ========================================
+   BOTÃO FLUTUANTE - MOSTRAR TODOS
+======================================== */
+
+#mostrar-todos-produtos:not([hidden]) {
+    position: fixed;
+
+    bottom: 24px;
+    right: 24px;
+    left: auto;
+    top: auto;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    margin: 0;
+    padding: 14px 22px;
+
+    background-color: #A75B3B;
+    border: 1px solid #A75B3B;
+    border-radius: 30px;
+
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow: 0 6px 20px rgba(47, 33, 27, 0.25);
+
+    cursor: pointer;
+}
+
+#mostrar-todos-produtos[hidden] {
+    display: none;
+}
+
+/* Versão para celular */
+
+@media (max-width: 600px) {
+
+    #mostrar-todos-produtos:not([hidden]) {
+        bottom: 18px;
+        right: 16px;
+        left: 16px;
+
+        width: auto;
+        padding: 15px 18px;
+        border-radius: 12px;
+    }
+
+}
+
+/* ========================================
+   MENSAGEM - NENHUM PRODUTO ENCONTRADO
+======================================== */
+
+.nenhum-produto {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px 25px;
+
+    background-color: #FFF9F3;
+    border: 1px solid #D8C5B4;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.nenhum-produto h3 {
+    margin: 0 0 12px;
+
+    color: #2F211B;
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.nenhum-produto p {
+    margin: 0;
+
+    color: #6B584D;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Mantém a mensagem oculta quando necessário */
+
+.nenhum-produto[hidden] {
+    display: none;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+
+    .nenhum-produto {
+        margin: 25px auto;
+        padding: 28px 18px;
+    }
+
+    .nenhum-produto h3 {
+        font-size: 21px;
+    }
+
+    .nenhum-produto p {
+        font-size: 14px;
+    }
+
+}
+
+/* ========================================
+   BOTÃO - LIMPAR PESQUISA
+======================================== */
+
+.limpar-pesquisa {
+    display: inline-block;
+
+    margin-top: 22px;
+    padding: 12px 24px;
+
+    background-color: #A75B3B;
+    border: 1px solid #A75B3B;
+    border-radius: 8px;
+
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.limpar-pesquisa:hover {
+    background-color: #87462D;
+    box-shadow: 0 4px 12px rgba(47, 33, 27, 0.18);
+}
+
+.limpar-pesquisa:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 3px;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+
+    .limpar-pesquisa {
+        width: 100%;
+        max-width: 260px;
+
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ========================================
+   CARDÁPIO MOBILE - CARTÕES COMPACTOS
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Lista vertical de produtos */
+    .cardapio-produtos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    /* Cartão horizontal */
+    .cardapio-item {
+        display: grid;
+        grid-template-columns: 86px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+
+        padding: 10px;
+
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(47, 33, 27, 0.06);
+    }
+
+    /* Fotografia menor, à esquerda */
+    .cardapio-item-imagem {
+        width: 86px;
+        height: 86px;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
+
+    /* Informações à direita */
+    .cardapio-item-conteudo {
+        min-width: 0;
+        padding: 0;
+    }
+
+    /* Nome do produto */
+    .cardapio-item-conteudo h3 {
+        margin: 0 0 5px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    /* Descrição resumida */
+    .cardapio-item-conteudo p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+
+        overflow: hidden;
+
+        margin: 0 0 6px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    /* Categoria */
+    .cardapio-item-categoria {
+        margin-bottom: 4px;
+        font-size: 10px;
+        letter-spacing: 0.4px;
+    }
+
+    /* Preço */
+    .cardapio-item-rodape {
+        gap: 3px;
+        padding-top: 5px;
+    }
+
+    .cardapio-item-rodape strong {
+        font-size: 15px;
+    }
+
+    .cardapio-item-rodape span {
+        font-size: 10px;
+    }
+
+    /* Indicador para abrir detalhes */
+    .cardapio-ver-detalhes {
+        justify-content: flex-start;
+        margin-top: 6px;
+        padding-top: 5px;
+        font-size: 11px;
+    }
+
+    .cardapio-ver-detalhes span:last-child {
+        font-size: 14px;
+    }
+
+    /* Selos mais discretos */
+    .cardapio-selo,
+    .cardapio-selo-local {
+        margin-bottom: 5px;
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+}
+
+/* Preserva a ocultação dos produtos filtrados */
+.cardapio-item[hidden] {
+    display: none;
+}
+
+/* ========================================
+   IDENTIDADE BOLIVIANA - CORES DA BANDEIRA
+======================================== */
+
+.cardapio-etiqueta .nome-vermelho {
+    color: #C63B32;
+}
+
+.cardapio-etiqueta .nome-amarelo {
+    color: #C49A23;
+}
+
+.cardapio-etiqueta .nome-verde {
+    color: #287A48;
+}
+
+/* ========================================
+   DETALHE TRICOLOR - BANDEIRA DA BOLÍVIA
+======================================== */
+
+.cardapio-apresentacao h1::after {
+    content: "";
+    display: block;
+
+    width: 180px;
+    height: 4px;
+
+    margin: 18px auto 0;
+    border-radius: 4px;
+
+    background: linear-gradient(
+        to right,
+        #C63B32 0%,
+        #C63B32 33.33%,
+        #E6BD38 33.33%,
+        #E6BD38 66.66%,
+        #287A48 66.66%,
+        #287A48 100%
+    );
+}
+
+
+/* ========================================
+   BOTÃO VOLTAR AO INÍCIO
+======================================== */
+
+.cardapio-voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto 30px;
+    padding: 0 24px;
+    text-align: left;
+
+    color: #A75B3B;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.cardapio-voltar:hover {
+    color: #2F211B;
+}
+
+.cardapio-voltar:focus-visible {
+    outline: 2px solid #A75B3B;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .cardapio-voltar {
+        margin-bottom: 25px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+}
+
+
+/* ========================================
+   RODAPÉ DO CARDÁPIO DIGITAL
+======================================== */
+
+.cardapio-footer {
+    margin-top: 60px;
+    background-color: #2F211B;
+    color: #F5EBDD;
+    text-align: center;
+}
+
+.cardapio-footer-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 20px 35px;
+}
+
+.cardapio-footer h2 {
+    margin: 0 0 12px;
+    color: #FFFFFF;
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.cardapio-footer-conteudo > p {
+    margin: 0;
+    color: #EADCCD;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* LINKS */
+
+.cardapio-footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px 28px;
+    margin: 28px 0;
+}
+
+.cardapio-footer-links a {
+    color: #E6BD38;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.cardapio-footer-links a:hover {
+    color: #FFFFFF;
+}
+
+.cardapio-footer-links a:focus-visible {
+    outline: 2px solid #E6BD38;
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* DIREITOS AUTORAIS */
+
+.cardapio-footer .cardapio-footer-copyright {
+    color: #CBBEB3;
+    font-size: 12px;
+}
+
+/* LINHA COM AS CORES DA BOLÍVIA */
+
+.cardapio-footer-bolivia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 5px;
+}
+
+.cardapio-footer-bolivia span:nth-child(1) {
+    background-color: #C63B32;
+}
+
+.cardapio-footer-bolivia span:nth-child(2) {
+    background-color: #E6BD38;
+}
+
+.cardapio-footer-bolivia span:nth-child(3) {
+    background-color: #287A48;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .cardapio-footer {
+        margin-top: 40px;
+    }
+
+    .cardapio-footer-conteudo {
+        padding: 35px 16px 28px;
+    }
+
+    .cardapio-footer h2 {
+        font-size: 21px;
+    }
+
+    .cardapio-footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
