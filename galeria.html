@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos do Sabores De Mi Tierra.">
+    <title>Nossa Galeria | Sabores De Mi Tierra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Voltar à tela inicial" title="Voltar à tela inicial">
+                <img src="assets/images/logo.jpg" alt="Sabores De Mi Tierra">
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="menu-principal" class="menu-principal" aria-label="Navegação principal">
+                <a href="site.html#inicio">Início</a>
+                <a href="site.html#sobre">Sobre nós</a>
+                <a href="site.html#diferenciais">Diferenciais</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="galeria.html" aria-current="page">Galeria</a>
+                <a href="site.html#localizacao">Localização</a>
+            </nav>
+            <a href="site.html#localizacao" class="btn-contato">Contato</a>
+        </div>
+        <div class="linha-bolivia" aria-hidden="true"><span></span><span></span><span></span></div>
+    </header>
+
+    <main class="pagina-galeria">
+        <section class="galeria-apresentacao" aria-labelledby="titulo-galeria">
+            <a href="site.html#galeria" class="galeria-voltar"><span aria-hidden="true">←</span> Voltar ao site</a>
+            <h1 id="titulo-galeria">Nossa Galeria</h1>
+            <p>Conheça um pouco mais dos sabores, momentos e experiências que fazem parte do Sabores De Mi Tierra.</p>
+        </section>
+
+        <section class="galeria-completa" aria-labelledby="titulo-fotos">
+            <div class="galeria-completa-container">
+                <h2 id="titulo-fotos">Todos os momentos</h2>
+                <div id="galeria-grid-completa" class="galeria-grid-completa" aria-live="polite">
+                    <p class="galeria-status">Carregando fotos…</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="visualizador-galeria" class="visualizador-galeria" role="dialog" aria-modal="true" aria-labelledby="visualizador-titulo" hidden>
+        <div class="visualizador-conteudo">
+            <h2 id="visualizador-titulo" class="sr-only">Foto ampliada</h2>
+            <button type="button" class="visualizador-fechar" data-acao="fechar" aria-label="Fechar foto ampliada">×</button>
+            <button type="button" class="visualizador-anterior" data-acao="anterior" aria-label="Foto anterior">‹</button>
+            <img class="visualizador-imagem" alt="">
+            <button type="button" class="visualizador-proximo" data-acao="proximo" aria-label="Próxima foto">›</button>
+            <p class="visualizador-contador" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-coluna"><h3>Sabores De Mi Tierra</h3><p>Um pedacinho da Bolívia em São Paulo.<br>Tradição, carinho e sabores que aproximam pessoas.</p></div>
+            <div class="footer-coluna"><h3>Links rápidos</h3><nav class="footer-links" aria-label="Links do rodapé">
+                <a href="index.html">Tela inicial</a><a href="site.html#sobre">Sobre nós</a><a href="site.html#diferenciais">Diferenciais</a><a href="galeria.html">Galeria</a><a href="site.html#localizacao">Contato</a><a href="termos.html" class="footer-link-legal">Termos de Uso</a><a href="privacidade.html" class="footer-link-legal">Política de Privacidade</a>
+            </nav></div>
+            <div class="footer-coluna"><h3>Funcionamento</h3><p>Segunda a quinta: Fechado</p><p>Sexta: 10h às 15h</p><p>Sábado e domingo: 10h às 17h</p></div>
+            <div class="footer-coluna"><h3>Acompanhe-nos</h3><div class="footer-redes"><a href="https://www.instagram.com/saboresdemitierra.alpha/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.tiktok.com/@saboresdemitierra_ofc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></div></div>
+        </div>
+        <div class="footer-inferior"><p>© 2026 Sabores De Mi Tierra. © Todos os direitos reservados. © Erick Souza Bernardes ©</p></div>
+        <div class="linha-bolivia" aria-hidden="true"><span></span><span></span><span></span></div>
+    </footer>
+    <script src="galeria.js"></script>
+</body>
+</html>

@@ -30,7 +30,7 @@ const produtos = [
     {   nome: "Sillp'ancho Individual",
         preco: 40,
         categoria: "principais",
-        imagem: null,
+        imagem: "assets/images/cardapio/silpInd.jpeg",
         descricao: "Tradicional prato de Cochabamba, na Bolívia, conhecido pela combinação de sabores e por ser uma refeição completa."
     },
 
@@ -44,14 +44,14 @@ const produtos = [
     {   nome: "Majadito",
         preco: 40,
         categoria: "principais",
-        imagem: null,
+        imagem: "assets/images/cardapio/majadito.jpeg",
         descricao: "Especialidade do oriente boliviano, conhecida pelo sabor caseiro e pela presença marcante do arroz em sua preparação tradicional."
     },
 
     {   nome: "Sopa de maní",
         preco: 25,
         categoria: "principais",
-        imagem: null,
+        imagem: "assets/images/cardapio/sopa.jpeg",
         descricao: "Uma das sopas mais tradicionais da Bolívia, conhecida pelo sabor característico do amendoim e por sua presença na culinária familiar boliviana."
     },
 
@@ -68,7 +68,7 @@ const produtos = [
     {   nome: "Picante Mixto",
         preco: 50,
         categoria: "especiais",
-        imagem: null,
+        imagem: "assets/images/cardapio/picantemixto.jpeg",
         descricao: "Uma combinação de duas especialidades da culinária boliviana: o frango do tradicional Picante de pollo e a língua bovina do Picante de lengua. Dois sabores marcantes reunidos em um único prato."
     },
 
@@ -82,7 +82,7 @@ const produtos = [
     {   nome: "Fricasé",
         preco: 50,
         categoria: "especiais",
-        imagem: null,
+        imagem: "assets/images/cardapio/fricasse.jpeg",
         descricao: "Uma especialidade muito apreciada na Bolívia, conhecida por seu caldo encorpado e sabor intenso."
     },
 
@@ -121,55 +121,48 @@ const produtos = [
         descricao: "Salteña boliviana tradicional, disponível nos sabores carne ou frango."
     },
 
-    {   nome: "Bizcochuelo",
-        preco: 6,
-        categoria: "entradas",
-        imagem: null,
-        descricao: ""
-    },
-
 
     // PORÇÕES
 
     {   nome: "Arroz (100 g)",
         preco: 10,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/arroz.jpeg",
         descricao: "Porção de arroz, uma opção prática para complementar sua refeição e acompanhar os pratos da casa."
     },
 
-    {   nome: "Batata frita (porção)",
+    {   nome: "Batata frita",
         preco: 15,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/batata.jpeg",
         descricao: "Uma deliciosa porção de batatas fritas, ideal para acompanhar nossos pratos ou saborear separadamente."
     },
 
     {   nome: "Banana-da-terra (4 fatias)",
         preco: 14,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/banana.jpeg",
         descricao: "Porção de banana-da-terra frita, um acompanhamento tradicional que combina o sabor levemente adocicado da banana com os pratos da culinária boliviana."
     },
 
-    {   nome: "Mote porção",
+    {   nome: "Porção de Mote",
         preco: 15,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/mote.jpeg",
         descricao: ""
     },
 
     {   nome: "Ovo frito (unidade)",
         preco: 4,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/ovo.jpeg",
         descricao: ""
     },
 
     {   nome: "Porção de pão",
         preco: 4,
         categoria: "porcoes",
-        imagem: null,
+        imagem: "assets/images/cardapio/pao.jpeg",
         descricao: ""
     },
 
@@ -178,11 +171,11 @@ const produtos = [
     // BEBIDAS
     // ==============================
 
-    {   nome: "Refresco Moqochinchi Garrafa",
+    {   nome: "Refresco Moqochinchi 1L",
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/moqochinchi1L.jpeg",
         descricao: "Bebida tradicional boliviana preparada com pêssegos desidratados e especiarias. Uma opção refrescante e muito popular na Bolívia."
     },
 
@@ -190,7 +183,7 @@ const produtos = [
         preco: 8.90,
         categoria: "bebidas",
         subcategorias: ["nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/refrilata.jpeg",
         descricao: "Refrigerante em lata, ideal para acompanhar os pratos do nosso cardápio."
     },
 
@@ -198,7 +191,7 @@ const produtos = [
         preco: 25,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/salvietti.jpeg",
         descricao: "Refrigerante boliviano com sabor de papaya, conhecido por seu sabor característico e muito apreciado na Bolívia."
     },
 
@@ -206,7 +199,7 @@ const produtos = [
         preco: 25,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/simba.jpeg",
         descricao: "Refrigerante Simba de 2 litros, uma bebida tradicionalmente consumida na Bolívia, ideal para compartilhar."
     },
 
@@ -214,7 +207,7 @@ const produtos = [
         preco: 10,
         categoria: "bebidas",
         subcategorias: ["alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/original.jpeg",
         descricao: "Cerveja Original, uma opção clássica para acompanhar sua refeição."
     },
 
@@ -222,7 +215,7 @@ const produtos = [
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/huari.jpeg",
         descricao: "Cerveja boliviana Huari, conhecida por sua tradição e sabor característico. Uma opção para quem deseja experimentar uma cerveja da Bolívia."
     },
 
@@ -230,7 +223,7 @@ const produtos = [
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/huariM.jpeg",
         descricao: "Cerveja boliviana Huari Miel, com notas de mel que proporcionam um sabor diferenciado."
     },
 
@@ -238,7 +231,7 @@ const produtos = [
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/pacena.jpeg",
         descricao: "Cerveja tradicional da Bolívia, conhecida por seu sabor refrescante e presença marcante na cultura boliviana."
     },
 
@@ -247,7 +240,7 @@ const produtos = [
         categoria: "bebidas",
         subcategorias: ["bolivianas", "alcoolicas", "coqueteis"],
         consumoLocal: true,
-        imagem: null,
+        imagem: "assets/images/cardapio/chufly.jpeg",
         descricao: "Coquetel tradicional boliviano preparado com singani. Disponível exclusivamente para consumo no restaurante."
     },
 
@@ -256,7 +249,7 @@ const produtos = [
         categoria: "bebidas",
         subcategorias: ["bolivianas", "alcoolicas"],
         consumoLocal: true,
-        imagem: null,
+        imagem: "assets/images/cardapio/shot.jpeg",
         descricao: "Dose de singani, destilado tradicional da Bolívia produzido a partir de uvas. Disponível exclusivamente para consumo no restaurante."
     },
 
@@ -264,11 +257,10 @@ const produtos = [
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/maltin.jpeg",
         descricao: "Bebida de malte sem álcool, com sabor marcante e levemente adocicado."
     },
 
-    // Novos itens autorizados pelo proprietário; descrições e fotos pendentes.
     {   nome: "Café",
         preco: 9.50,
         categoria: "bebidas",
@@ -277,19 +269,11 @@ const produtos = [
         descricao: ""
     },
 
-    {   nome: "Malta (350 ml)",
-        preco: 13,
-        categoria: "bebidas",
-        subcategorias: [], // Teor alcoólico ainda não informado na referência.
-        imagem: null,
-        descricao: ""
-    },
-
     {   nome: "Moqochinchi Copo",
         preco: 12,
         categoria: "bebidas",
         subcategorias: ["bolivianas", "nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/moqochinchi.jpeg",
         descricao: ""
     },
 
@@ -297,7 +281,7 @@ const produtos = [
         preco: 20,
         categoria: "bebidas",
         subcategorias: ["bolivianas"], // Não presumir fermentação ou teor alcoólico.
-        imagem: null,
+        imagem: "assets/images/cardapio/chicha.jpeg",
         descricao: ""
     },
 
@@ -305,47 +289,26 @@ const produtos = [
         preco: 12,
         categoria: "bebidas",
         subcategorias: ["bolivianas"], // Não presumir fermentação ou teor alcoólico.
-        imagem: null,
+        imagem: "assets/images/cardapio/chichacopo.jpeg",
         descricao: ""
     },
 
-    {   nome: "Taça de vinho",
-        preco: 35,
+
+    {
+        nome: "Vinho",
+        preco: null,
         categoria: "bebidas",
         subcategorias: ["alcoolicas"],
-        imagem: null,
-        descricao: ""
+        imagem: "assets/images/cardapio/vinho.jpeg",
+        descricao: "Opções disponíveis: Vinho C. de Solana, Vinho Kohlberg e Vinho San Isidro. Consulte os valores diretamente com o restaurante."
     },
 
-    {   nome: "Vinho C. de Solana",
-        preco: 85,
-        categoria: "bebidas",
-        subcategorias: ["alcoolicas"],
-        imagem: null,
-        descricao: ""
-    },
-
-    {   nome: "Vinho Kohlberg",
-        preco: 70,
-        categoria: "bebidas",
-        subcategorias: ["alcoolicas"],
-        imagem: null,
-        descricao: ""
-    },
-
-    {   nome: "Vinho San Isidro",
-        preco: 70,
-        categoria: "bebidas",
-        subcategorias: ["alcoolicas"],
-        imagem: null,
-        descricao: ""
-    },
 
     {   nome: "Água",
         preco: 7,
         categoria: "bebidas",
         subcategorias: ["nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/agua.jpeg",
         descricao: ""
     },
 
@@ -353,7 +316,7 @@ const produtos = [
         preco: 7,
         categoria: "bebidas",
         subcategorias: ["nao_alcoolicas"],
-        imagem: null,
+        imagem: "assets/images/cardapio/aguagas.jpeg",
         descricao: ""
     },
 

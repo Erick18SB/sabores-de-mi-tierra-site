@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "images": [
+    {
+      "src": "assets/images/galeria/a.jpeg",
+      "alt": "Foto A"
+    },
+    {
+      "src": "assets/images/galeria/foto1.jpeg",
+      "alt": "Foto Foto1"
+    },
+    {
+      "src": "assets/images/galeria/foto2.jpeg",
+      "alt": "Foto Foto2"
+    },
+    {
+      "src": "assets/images/galeria/foto3.jpeg",
+      "alt": "Foto Foto3"
+    },
+    {
+      "src": "assets/images/galeria/foto4.jpeg",
+      "alt": "Foto Foto4"
+    },
+    {
+      "src": "assets/images/galeria/s.jpeg",
+      "alt": "Foto S"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Imag1e%202026-11-09%20at%2010.24.08.jpeg",
+      "alt": "Foto WhatsApp Imag1e 2026 11 09 At 10.24.08"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202s026-11-09%20at%2010.25.22.jpeg",
+      "alt": "Foto WhatsApp Image 2s026 11 09 At 10.25.22"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202026-11-09%20at%2010.24.07.jpeg",
+      "alt": "Foto WhatsApp Image 2026 11 09 At 10.24.07"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202026-11-09%20at%2010.25.21.jpeg",
+      "alt": "Foto WhatsApp Image 2026 11 09 At 10.25.21"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202026-11-09%20at%2010.214.07.jpeg",
+      "alt": "Foto WhatsApp Image 2026 11 09 At 10.214.07"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202026-11s-09%20at%2010.25.23.jpeg",
+      "alt": "Foto WhatsApp Image 2026 11s 09 At 10.25.23"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%202026-s11-09%20at%2010.25.22.jpeg",
+      "alt": "Foto WhatsApp Image 2026 S11 09 At 10.25.22"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Image%2020126-11-09%20at%2010.24.08.jpeg",
+      "alt": "Foto WhatsApp Image 20126 11 09 At 10.24.08"
+    },
+    {
+      "src": "assets/images/galeria/WhatsApp%20Ismage%202026-11-09%20at%2010.23.19.jpeg",
+      "alt": "Foto WhatsApp Ismage 2026 11 09 At 10.23.19"
+    }
+  ]
+}

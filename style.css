@@ -1675,3 +1675,20 @@ body {
     outline: 2px solid #8b451f;
     outline-offset: 3px;
 }
+
+.galeria-ver-mais {
+    display: block;
+    width: fit-content;
+    margin: 28px auto 0;
+    padding: 13px 24px;
+    border-radius: 8px;
+    background-color: #A75B3B;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+}
+
+.galeria-ver-mais:hover { background-color: #8F492E; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(47, 33, 27, .2); }
+.galeria-ver-mais:focus-visible { outline: 3px solid #D8AC42; outline-offset: 3px; }
+.visualizador-aberto { overflow: hidden; }
